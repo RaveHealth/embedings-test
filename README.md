@@ -1,7 +1,7 @@
 # AI Candidate Matching Demo
 
 
-This is a Streamlit application for matching candidates to job offers using semantic embeddings (Sentence Transformers).
+This is a Streamlit application for matching candidates to job offers using semantic embeddings (Sentence Transformers https://www.sbert.net/).
 
 ## How Semantic Embeddings Work
 

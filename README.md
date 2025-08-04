@@ -26,7 +26,7 @@ This is a Streamlit application for matching candidates to job offers using sema
 
 ## Deployment 
 
-We need decide where to deploy
+Deployed to https://rave-embedings.streamlit.app/
 
 ## Files
 - `app.py` – main Streamlit app with two tabs

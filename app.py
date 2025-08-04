@@ -9,7 +9,7 @@ def load_model():
 
 model = load_model()
 
-tab1, tab2 = st.tabs(["Demo: Select Candidate", "Demo: Custom Input"])
+tab1, tab2, tab3 = st.tabs(["Demo: Select Candidate", "Demo: Custom Input", "How Embeddings Work"])
 
 with tab1:
     st.title("AI Candidate Matching Demo for Nursing Jobs")
@@ -101,3 +101,21 @@ with tab2:
                     score = similarities[idx].item()
                     st.markdown(f"**Match #{rank + 1}:** {offer}")
                     st.markdown(f"_Score: `{score:.2f}`_")
+
+with tab3:
+    st.title("How Semantic Embeddings Work")
+    st.markdown("""
+Semantic embeddings are vector representations of text that capture the meaning and context of sentences. Using models like Sentence Transformers, each candidate profile and job offer is converted into a high-dimensional vector. The similarity between these vectors (typically measured by cosine similarity) reflects how closely the meanings of the texts match, regardless of exact wording.
+
+For example, "Nurse with ICU experience" and "ICU nurse wanted" will have very similar embeddings, even though the wording is different.
+
+### Business Usefulness
+
+Semantic matching with embeddings can be used in many business scenarios, such as:
+- **Recruitment & HR:** Automatically match candidate profiles to job descriptions, reducing manual screening time and improving the quality of recommendations.
+- **Customer Support:** Route support tickets to the most relevant department or agent based on the semantic content of the request.
+- **Document Search:** Find the most relevant documents, FAQs, or knowledge base articles for a user's query, even if the query uses different words than the documents.
+- **Personalization:** Recommend products, services, or content based on the semantic similarity between user preferences and available options.
+
+This approach enables smarter, context-aware automation and recommendations, leading to better user experience and business efficiency.
+""")
